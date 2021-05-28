@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/hecntdev/videogames#readme",
   "dependencies": {
+    "colors": "^1.4.0",
     "mongodb": "^3.6.9"
   }
 }
