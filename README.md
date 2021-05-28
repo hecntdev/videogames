@@ -22,9 +22,7 @@ export PORT=3001
 Variables de entorno front.
 
 ```sh
-export URI_MONGO="mongodb://127.0.0.1:27017"
-export DB="VideoGames"
-export PORT=3001
+export REACT_APP_URI="http://localhost:3001"
 ```
 
 Instalacion de dependencias y correr.
