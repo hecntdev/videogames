@@ -1,9 +1,8 @@
 # videogames
 
-####Instalar dependencias
+Aplicacion examen,
+Realizada con ReactJS, NodeJS, MongoDB.
 
-`$ npm run start`
-
-####Correr back
-
-`$ npm run start`
+- Type some Markdown on the left
+- See HTML in the right
+- ✨Magic ✨
