@@ -1,0 +1,26 @@
+{
+  "name": "videogames",
+  "version": "1.0.0",
+  "description": "CRUD Games",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hecntdev/videogames.git"
+  },
+  "keywords": [
+    "hola"
+  ],
+  "author": "hecnt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hecntdev/videogames/issues"
+  },
+  "homepage": "https://github.com/hecntdev/videogames#readme",
+  "dependencies": {
+    "mongodb": "^3.6.9"
+  }
+}
