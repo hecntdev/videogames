@@ -11,7 +11,15 @@ Realizada con:
 
 Videogames requiere [Node.js](https://nodejs.org/) v10+ para correr.
 
-Variables de entorno.
+Variables de entorno back.
+
+```sh
+export URI_MONGO="mongodb://127.0.0.1:27017"
+export DB="VideoGames"
+export PORT=3001
+```
+
+Variables de entorno front.
 
 ```sh
 export URI_MONGO="mongodb://127.0.0.1:27017"
