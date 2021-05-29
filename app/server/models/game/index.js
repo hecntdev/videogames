@@ -44,5 +44,49 @@ const insertOne = async (d) => {
   });
 }
 
+const getConsoles = async (d) => {
+  console.log(colors.green('GET getConsoles'));
+  return new Promise(async (resolve, reject) => {
+    const client = await conn.doConn()
+    await client.connect()
+
+    console.log(colors.yellow('OPTIONS:'), d);
+    try {
+      const obj = {}
+      const data = await client.db(db).collection("consoles").find(obj).toArray()
+      console.log(colors.blue('DATA: '), data);
+      resolve(data)
+    } catch (e) {
+      console.log(colors.red('ERR:'), e);
+      reject(e)
+    } finally {
+      await client.close()
+    }
+  });
+}
+
+const getDeveloper = async (d) => {
+  console.log(colors.green('GET getDeveloper'));
+  return new Promise(async (resolve, reject) => {
+    const client = await conn.doConn()
+    await client.connect()
+
+    console.log(colors.yellow('OPTIONS:'), d);
+    try {
+      const obj = {}
+      const data = await client.db(db).collection("developers").find(obj).toArray()
+      console.log(colors.blue('DATA: '), data);
+      resolve(data)
+    } catch (e) {
+      console.log(colors.red('ERR:'), e);
+      reject(e)
+    } finally {
+      await client.close()
+    }
+  });
+}
+
 module.exports.findById = findById;
 module.exports.insertOne = insertOne;
+module.exports.getConsoles = getConsoles;
+module.exports.getDeveloper = getDeveloper;

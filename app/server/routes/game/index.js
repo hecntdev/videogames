@@ -14,7 +14,28 @@ const insertOne = async (req, res) => {
   res.json(d)
 }
 
+const getYears = async (req, res) => {
+  console.log(colors.green('getYears'));
+  const d = await ctrl.getYears()
+  res.json(d)
+}
+
+const getConsoles = async (req, res) => {
+  console.log(colors.green('getConsoles'));
+  const d = await ctrl.getConsoles()
+  res.json(d)
+}
+
+const getDeveloper = async (req, res) => {
+  console.log(colors.green('getDeveloper'));
+  const d = await ctrl.getDeveloper()
+  res.json(d)
+}
+
 router.post('/findById', findById)
 router.post('/insertOne', insertOne)
+router.get('/getYears', getYears)
+router.get('/getConsoles', getConsoles)
+router.get('/getDeveloper', getDeveloper)
 
 module.exports = router;

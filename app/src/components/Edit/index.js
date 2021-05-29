@@ -8,7 +8,7 @@ const Edit = (props) => {
     <div className="Container">
       <Header as='h2'>
         <Icon name='paper plane outline' />
-        <Header.Content>Agregar nuevo VideoJuego</Header.Content>
+        <Header.Content>Editar VideoJuego {props.data.name}</Header.Content>
       </Header>
       <Divider />
       <Message
@@ -28,25 +28,25 @@ const Edit = (props) => {
           <Form.Select
             fluid
             label='Año'
-            options={props.developers}
+            options={props.years}
             placeholder='Año publicacion'
-            onChange={(v, e) => props.handleDev(v, e)}
+            onChange={(v, e) => props.handleSelect(v, e)}
           />
           <Form.Select
             fluid
             label='Desarrollador'
             options={props.developers}
             placeholder='Buscar por Desarrollador'
-            onChange={(v, e) => props.handleDev(v, e)}
+            onChange={(v, e) => props.handleSelect(v, e)}
           />
         </Form.Group>
         <Form.Group widths='equal'>
           <Form.Select
             fluid
             label='Consola'
-            options={props.developers}
+            options={props.consoles}
             placeholder='Consola'
-            onChange={(v, e) => props.handleDev(v, e)}
+            onChange={(v, e) => props.handleSelect(v, e)}
           />
         </Form.Group>
         <Form.Field
