@@ -15,7 +15,7 @@ Ingresar a la plataforma. (Esta harcodeado el login xD)
 
 ```sh
 user: admin
-user: admin
+pass: admin
 ```
 
 Variables de entorno back.
