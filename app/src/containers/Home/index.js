@@ -27,6 +27,12 @@ class Home extends Component {
         }, {
           text: '15', value: 15
         } ]
+      },
+      form: {
+        name: "",
+        image: "",
+        description: "",
+        developer: { name: "" }
       }
     }
 
@@ -38,6 +44,7 @@ class Home extends Component {
     this.handleDelete = this.handleDelete.bind(this)
     this.handleView = this.handleView.bind(this)
     this.setOpenDescription = this.setOpenDescription.bind(this)
+    this.handleGoto = this.handleGoto.bind(this)
 
   }
 
@@ -140,7 +147,10 @@ class Home extends Component {
 
   handleView(v) {
     this.setState({ toggleDescription: true, form: v })
-    console.log(v,'<----');
+  }
+
+  handleGoto() {
+    window.location = "add"
   }
 
   render() {
@@ -153,6 +163,7 @@ class Home extends Component {
         handleDev={this.handleDev}
         handleDelete={this.handleDelete}
         handleView={this.handleView}
+        handleGoto={this.handleGoto}
         years={this.state.yearsF}
         developers={this.state.developersF}
         toggle={this.state.open}

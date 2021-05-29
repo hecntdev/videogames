@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from './containers/Home'
 import Login from './containers/Login'
+import Add from './containers/Add'
 import { Menu } from 'semantic-ui-react'
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
         <Switch>
           <Route path="/home">
             <Home />
+          </Route>
+          <Route path="/add">
+            <Add />
           </Route>
           <Route path="/">
             <Login />

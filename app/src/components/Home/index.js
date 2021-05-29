@@ -45,6 +45,16 @@ const Home = (props) => {
         </Form.Group>
       </Form>
 
+      <Button
+        content="Nuevo VideoJuego"
+        floated='right'
+        labelPosition='right'
+        icon='plus'
+        onClick={props.handleGoto}
+        positive
+      />
+      <br/> <br/>
+
       <Table celled fixed singleLine>
         <Table.Header>
           <Table.Row>
