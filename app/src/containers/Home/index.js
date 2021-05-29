@@ -122,11 +122,11 @@ class Home extends Component {
     })
     .then((willDelete) => {
       if (willDelete) {
-        swal("Poof! Your imaginary file has been deleted!", {
-          icon: "success",
-        });
+        axios.post(`${process.env.REACT_APP_URI}/home/deleteOne`, {"name": e.value.name, "year": e.value.year}).then(res => {
+          window.location.reload();
+        })
       } else {
-        swal("Your imaginary file is safe!");
+        swal("No se elimino el registro!");
       }
     });
   }

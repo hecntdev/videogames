@@ -28,7 +28,15 @@ const findDevelop = async (d) => {
   });
 }
 
+const deleteOne = async (d) => {
+  return new Promise(async (resolve, reject) => {
+    let res = await model.deleteOne(d)
+    resolve(res)
+  });
+}
+
 module.exports.getGames = getGames;
 module.exports.findName = findName;
 module.exports.findYear = findYear;
 module.exports.findDevelop = findDevelop;
+module.exports.deleteOne = deleteOne;

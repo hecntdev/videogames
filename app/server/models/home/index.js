@@ -102,8 +102,30 @@ const findDevelop = async (d) => {
   });
 }
 
+const deleteOne = async (d) => {
+  console.log(colors.green('GET deleteOne'));
+  return new Promise(async (resolve, reject) => {
+    const client = await conn.doConn()
+    await client.connect()
+
+    console.log(colors.yellow('OPTIONS:'), d);
+    try {
+      const obj = { "name": d.name, "year": d.year }
+      const data = await client.db(db).collection("videogames").deleteOne(obj)
+      console.log(colors.blue('DATA: '), data);
+      resolve(data)
+    } catch (e) {
+      console.log(colors.red('ERR:'), e);
+      reject(e)
+    } finally {
+      await client.close()
+    }
+  });
+}
+
 module.exports.getConsoles = getConsoles;
 module.exports.getGames = getGames;
 module.exports.findName = findName;
 module.exports.findYear = findYear;
 module.exports.findDevelop = findDevelop;
+module.exports.deleteOne = deleteOne;
