@@ -3,7 +3,6 @@ import { Button, Header, Image, Modal, Icon } from 'semantic-ui-react'
 import '../../assets/css/index.css'
 
 const ModalV = (props) => {
-  console.log(props,'<---- props');
   return (
     <Modal
       closeIcon

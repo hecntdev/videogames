@@ -13,6 +13,7 @@ class Home extends Component {
       name: '',
       games: [],
       open: false,
+      toggleDescription: false,
       image: '',
       yearsF: [],
       developersF: [],
@@ -35,6 +36,8 @@ class Home extends Component {
     this.handleImg = this.handleImg.bind(this)
     this.setOpen = this.setOpen.bind(this)
     this.handleDelete = this.handleDelete.bind(this)
+    this.handleView = this.handleView.bind(this)
+    this.setOpenDescription = this.setOpenDescription.bind(this)
 
   }
 
@@ -112,6 +115,10 @@ class Home extends Component {
     this.setState({ open: v })
   }
 
+  setOpenDescription(v) {
+    this.setState({ toggleDescription: v })
+  }
+
   handleDelete(v, e) {
     swal({
       title: "¿Estas seguro que deseas eliminar el titulo " + e.value.name + " ?",
@@ -131,6 +138,11 @@ class Home extends Component {
     });
   }
 
+  handleView(v) {
+    this.setState({ toggleDescription: true, form: v })
+    console.log(v,'<----');
+  }
+
   render() {
     return (
       <HomeC
@@ -140,11 +152,15 @@ class Home extends Component {
         handleImg={this.handleImg}
         handleDev={this.handleDev}
         handleDelete={this.handleDelete}
+        handleView={this.handleView}
         years={this.state.yearsF}
         developers={this.state.developersF}
         toggle={this.state.open}
         image={this.state.image}
         setOpen={this.setOpen}
+        toggleDescription={this.state.toggleDescription}
+        setOpenDescription={this.setOpenDescription}
+        form={this.state.form}
       />
     )
   }

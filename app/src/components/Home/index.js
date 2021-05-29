@@ -2,11 +2,16 @@ import React from 'react'
 import { Header, Icon, Form, Grid, Message, Image, Divider, Table, Button } from 'semantic-ui-react'
 import '../../assets/css/index.css'
 import ModalC from './Modal.js'
+import ModalDescription from './ModalDescription.js'
 
 const Home = (props) => {
   return (
     <div className="Container">
       <ModalC
+        {...props}
+      />
+
+      <ModalDescription
         {...props}
       />
 
@@ -54,7 +59,7 @@ const Home = (props) => {
           {props.data.map(( listValue, index ) => {
             return (
               <Table.Row key={index}>
-                <Table.Cell>{listValue.name}</Table.Cell>
+                <Table.Cell onClick={() => props.handleView(listValue)}>{listValue.name}</Table.Cell>
                 <Table.Cell>{listValue.year}</Table.Cell>
                 <Table.Cell>{listValue.description}</Table.Cell>
                 <Table.Cell>
