@@ -25,12 +25,18 @@ Variables de entorno front.
 export REACT_APP_URI="http://localhost:3001"
 ```
 
-Instalacion de dependencias y correr.
+Instalacion de dependencias y correr Back.
 
 ```sh
-cd videogames
+cd videogames/app
 npm i
 npm run start
 ```
 
+Instalacion de dependencias y correr Front.
 
+```sh
+cd videogames/app
+npm i
+npm run dev
+```
