@@ -153,6 +153,10 @@ class Home extends Component {
     window.location = "add"
   }
 
+  handleEdit(v) {
+    window.location = "/edit/" + v._id
+  }
+
   render() {
     return (
       <HomeC
@@ -164,6 +168,7 @@ class Home extends Component {
         handleDelete={this.handleDelete}
         handleView={this.handleView}
         handleGoto={this.handleGoto}
+        handleEdit={this.handleEdit}
         years={this.state.yearsF}
         developers={this.state.developersF}
         toggle={this.state.open}

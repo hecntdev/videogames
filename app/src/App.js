@@ -8,9 +8,11 @@ import {
 import Home from './containers/Home'
 import Login from './containers/Login'
 import Add from './containers/Add'
+import Edit from './containers/Edit'
 import { Menu } from 'semantic-ui-react'
 
 function App() {
+
   return (
     <>
       <Menu stackable>
@@ -20,10 +22,10 @@ function App() {
         <Menu.Item name='features'>
           VideoJuegos
         </Menu.Item>
-        <Menu.Item name='testimonials'>
+        <Menu.Item name='Dashboard' onClick={() => window.location = "/home"}>
           Dashboard
         </Menu.Item>
-        <Menu.Item name='sign-in'>
+        <Menu.Item name='sign-in' onClick={() => window.location = "/"}>
           Sign-in
         </Menu.Item>
       </Menu>
@@ -34,6 +36,9 @@ function App() {
           </Route>
           <Route path="/add">
             <Add />
+          </Route>
+          <Route path="/edit/:id">
+            <Edit />
           </Route>
           <Route path="/">
             <Login />

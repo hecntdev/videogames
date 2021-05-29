@@ -27,7 +27,7 @@ const ModalDescription = (props) => {
           content="Editar"
           labelPosition='right'
           icon='pencil alternate'
-          onClick={() => props.setOpenDescription(false)}
+          onClick={() => props.handleEdit(props.form)}
         />
         <Button
           content="Ok"

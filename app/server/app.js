@@ -14,6 +14,7 @@ app.use(function (req, res, next) {
 
 app.use('/home', require('./routes/home'));
 app.use('/health', require('./routes/health'));
+app.use('/game', require('./routes/game'));
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(colors.blue(`Aplicación escuchando en el puerto ${process.env.PORT || 3000}`));
