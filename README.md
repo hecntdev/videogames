@@ -43,7 +43,6 @@ Correr Back DEV.
 
 ```sh
 cd videogames/app
-npm i
 npm run start
 ```
 
@@ -51,7 +50,6 @@ Correr Front DEV.
 
 ```sh
 cd videogames/app
-npm i
 npm run dev
 ```
 
@@ -59,7 +57,6 @@ Compilar Front DEV.
 
 ```sh
 cd videogames/app
-npm i
 npm run build
 ```
 
@@ -67,6 +64,5 @@ Realizar pruebas Front DEV.
 
 ```sh
 cd videogames/app
-npm i
 npm run test
 ```
