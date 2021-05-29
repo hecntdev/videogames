@@ -24,6 +24,7 @@ const Edit = (props) => {
             control={Input}
             label='Nombre VideoJuego'
             placeholder='VideoJuego ...'
+            value={props.data.name}
           />
           <Form.Select
             fluid
@@ -54,6 +55,7 @@ const Edit = (props) => {
           control={TextArea}
           label='Descripción'
           placeholder='Descripción ...'
+          value={props.data.description}
         />
         <Button
           content="Agregar"
