@@ -25,9 +25,9 @@ const getConsoles = async (d) => {
 const getYears = async (d) => {
   return new Promise(async (resolve, reject) => {
     const res = [
-      { key: 2000, text: 2000, value: 2000 }, { key: 2001, text: 2001, value: 2001 }, { key: 2002, text: 2002, value: 2002 }, { key: 2003, text: 2003, value: 2003 }, { key: 2004, text: 2004, value: 2004 }, { key: 2005, text: 2005, value: 2005 }, { key: 2006, text: 2006, value: 2006 }, { key: 2007, text: 2007, value: 2007 }, { key: 2008, text: 2008, value: 2008 }, { key: 2009, text: 2009, value: 2009 },
-      { key: 2010, text: 2010, value: 2010 }, { key: 2011, text: 2011, value: 2011 }, { key: 2012, text: 2012, value: 2012 }, { key: 2012, text: 2012, value: 2012 }, { key: 2013, text: 2013, value: 2013 }, { key: 2014, text: 2014, value: 2014 }, { key: 2015, text: 2015, value: 2015 }, { key: 2016, text: 2016, value: 2016 }, { key: 2017, text: 2017, value: 2017 }, { key: 2018, text: 2018, value: 2018 },
-      { key: 2019, text: 2019, value: 2019 }, { key: 2020, text: 2020, value: 2020 }, { key: 2021, text: 2021, value: 2021 }
+      { key: 'k00', text: 2000, value: 2000 }, { key: 'k01', text: 2001, value: 2001 }, { key: 'k02', text: 2002, value: 2002 }, { key: 'k03', text: 2003, value: 2003 }, { key: 'k04', text: 2004, value: 2004 }, { key: 'k05', text: 2005, value: 2005 }, { key: 'k06', text: 2006, value: 2006 }, { key: 'k07', text: 2007, value: 2007 }, { key: 'k08', text: 2008, value: 2008 }, { key: 'k09', text: 2009, value: 2009 },
+      { key: 'k10', text: 2010, value: 2010 }, { key: 'k11', text: 2011, value: 2011 }, { key: 'k12', text: 2012, value: 2012 }, { key: 'k13', text: 2013, value: 2013 }, { key: 'k14', text: 2014, value: 2014 }, { key: 'k15', text: 2015, value: 2015 }, { key: 'k16', text: 2016, value: 2016 }, { key: 'k17', text: 2017, value: 2017 }, { key: 'k18', text: 2018, value: 2018 },
+      { key: 'k19', text: 2019, value: 2019 }, { key: 'k20', text: 2020, value: 2020 }, { key: 'k21', text: 2021, value: 2021 }
     ]
     resolve(res)
   });

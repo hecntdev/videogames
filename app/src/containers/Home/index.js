@@ -32,7 +32,8 @@ class Home extends Component {
         name: "",
         image: "",
         description: "",
-        developer: { name: "" }
+        developer: { name: "" },
+        console: []
       }
     }
 

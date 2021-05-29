@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Header, Image, Modal, Icon } from 'semantic-ui-react'
+import { Button, Header, Image, Modal, Icon, Table } from 'semantic-ui-react'
 import '../../assets/css/index.css'
 
 const ModalDescription = (props) => {
@@ -19,6 +19,26 @@ const ModalDescription = (props) => {
           </p>
           <h4>Desarrollador:</h4>
           <p>{props.form.developer.name}</p>
+          <h4>Consolas:</h4>
+          <Table celled striped>
+            <Table.Header>
+              <Table.Row>
+                <Table.HeaderCell colSpan='3'>Consolas</Table.HeaderCell>
+              </Table.Row>
+            </Table.Header>
+
+            <Table.Body>
+              {props.form.console.map(( listValue, index ) => {
+                return (
+                  <Table.Row key={index}>
+                    <Table.Cell collapsing>
+                      <Icon name={listValue.name.includes('Playsta') ? 'playstation' : listValue.name.includes('Xbox') ? 'xbox' : listValue.name.includes('Nintendo') ? 'nintendo switch' : 'gamepad' } /> {listValue.name}
+                    </Table.Cell>
+                  </Table.Row>
+                );
+              })}
+            </Table.Body>
+          </Table>
         </Modal.Description>
       </Modal.Content>
       <Modal.Actions>

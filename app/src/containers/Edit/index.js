@@ -9,7 +9,15 @@ class Edit extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      game: {},
+      game: {
+        name: '',
+        description:'',
+        developer: { name: '' },
+        year: '',
+        console: [],
+        image: '',
+        is_active: ''
+      },
       years: [],
       consoles: [],
       developers: []
@@ -31,8 +39,8 @@ class Edit extends Component {
     })
 
     axios.get(`${process.env.REACT_APP_URI}/game/getDeveloper`).then(res => {
-      const years = res.data
-      this.setState({ years })
+      const developers = res.data
+      this.setState({ developers })
     })
 
     axios.get(`${process.env.REACT_APP_URI}/game/getConsoles`).then(res => {
@@ -41,8 +49,8 @@ class Edit extends Component {
     })
 
     axios.get(`${process.env.REACT_APP_URI}/game/getYears`).then(res => {
-      const developers = res.data
-      this.setState({ developers })
+      const years = res.data
+      this.setState({ years })
     })
 
   }
