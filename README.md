@@ -11,6 +11,13 @@ Realizada con:
 
 Videogames requiere [Node.js](https://nodejs.org/) v10+ para correr.
 
+Ingresar a la plataforma. (Esta harcodeado el login xD)
+
+```sh
+user: admin
+user: admin
+```
+
 Variables de entorno back.
 
 ```sh
